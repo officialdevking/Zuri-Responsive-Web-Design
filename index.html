@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Webpage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="nav-bar">
-        <div class="logo">Snapshot</div>
+        <div class="logo">
+            <div class="nav-brand">Snapshot</div>
+            <div class="dropdown-btn"><i class="fa fa-bars"></i></div>
+        </div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -35,8 +39,8 @@
         <div class="background">
             <h4>Background</h4>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus sint ab rerum obcaecati totam neque quam corrupti dolores? Ipsam tempora consequatur quaerat. Voluptates accusamus molestiae nulla sapiente explicabo tempore possimus?</p>
+            <div class="hero-background-pos"></div>
         </div>
-        <div class="hero-background-pos"></div>
     </div>
     <div class="snapshot-team">
         <h2>Snapshot Team</h2>
@@ -44,15 +48,15 @@
     </div>
     <div class="snapshot-box">
         <div class="snapshot-box-content">
-            <div class="box1">
-                    <div class="circle"></div>
-                    <h5>Linda, Manager</h5>
-            </div>
-            <div class="box1">
+            <div class="box">
                 <div class="circle"></div>
                 <h5>Linda, Manager</h5>
             </div>
-            <div class="box3">
+            <div class="box">
+                <div class="circle"></div>
+                <h5>Linda, Manager</h5>
+            </div>
+            <div class="box">
                 <div class="circle"></div>
                 <h5>Linda, Manager</h5>
             </div>
@@ -103,5 +107,10 @@
         </div>
         <h6>Copyright &copy; 2021 Zuri Training.</h6>
     </div>
+    <script>
+        document.querySelector('.dropdown-btn').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('toggle-nav-link')
+        })
+    </script>
 </body>
 </html>
